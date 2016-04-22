@@ -1,0 +1,32 @@
+.Art {
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 130px 50px;
+  overflow: auto;
+  color: #aaa;
+  text-align: center;
+  font-size: 30px;
+  background: #fff;
+}
+
+.Art button {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  padding: 15px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  background: red;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+}

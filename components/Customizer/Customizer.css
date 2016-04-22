@@ -1,0 +1,27 @@
+.Customizer {
+  position: fixed;
+  bottom: 20px;
+  left:  20px;
+  z-index: 1111;
+  box-sizing: border-box;
+  display: table;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #eee;
+  color: #aaa;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.Customizer .field {
+  display: table-cell;
+  width: 50%;
+}
+
+.Customizer .field input {
+  box-sizing: border-box;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}

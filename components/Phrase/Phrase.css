@@ -1,0 +1,26 @@
+.Phrase {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.Phrase input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px 15px;
+  border: none;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: #aaa;
+  background: #fff;
+}
+
+.Phrase input::-webkit-input-placeholder {
+   color: #ddd;
+}
