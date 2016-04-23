@@ -2,7 +2,7 @@
 
 Like ascii art, type a phrase and this app will render emoji letter art.
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
 
 ### Install
 First clone or download the app to your local machine, then install all dependencies with:

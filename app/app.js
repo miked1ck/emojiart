@@ -13,8 +13,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      'shading': '😎',
-      'fill': '💩',
+      'shading': '🖖',
+      'fill': '👽',
       'phrase': '',
       'art': ''
     };
