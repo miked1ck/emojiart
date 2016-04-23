@@ -34,7 +34,7 @@ class Art extends React.Component {
     };
 
     var art = '';
-    var phrase = '-' + this.props.phrase;
+    var phrase = '-' + this.props.phrase.toLowerCase();
     if (phrase.length > 1) {
       phrase = phrase.replace(/ /gi, '-');
       var art = phrase.split('').map(function(v, k) {
