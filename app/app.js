@@ -31,6 +31,7 @@ class App extends React.Component {
           _setState={(e) => this._setState(e)} />
         <Customizer
           _setState={(e) => this._setState(e)}
+          phrase={this.state.phrase}
           fill={this.state.fill}
           shading={this.state.shading} />
         <Art
@@ -39,6 +40,7 @@ class App extends React.Component {
           fill={this.state.fill}
           shading={this.state.shading} />
           <Copy
+            phrase={this.state.phrase}
             art={this.state.art} />
       </div>
     );

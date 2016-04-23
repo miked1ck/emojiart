@@ -14,7 +14,7 @@ class Customizer extends React.Component {
 
   render() {
     return (
-      <div className="Customizer">
+      <div className="Customizer" hidden={this.props.phrase === ''}>
         <div className="field">
           <label for="fill">Change fill</label>
           <input type="text" name="fill" size="1" onChange={(e) => this._handleChange(e)} placeholder={this.props.fill} />
