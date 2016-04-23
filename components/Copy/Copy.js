@@ -21,7 +21,7 @@ class Copy extends React.Component {
     new Clipboard('#copy');
 
     return (
-      <div className="Copy">
+      <div className="Copy" hidden={this.props.phrase === ''}>
         <button type="button" id="copy" data-clipboard-target="#art" onClick={(e) => this._handleClick(e)}>
           <span hidden={this.state.showAlert}>Copy to clipboard</span>
           <span hidden={!this.state.showAlert}>Copied!</span>

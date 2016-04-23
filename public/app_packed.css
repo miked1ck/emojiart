@@ -15,7 +15,7 @@ header, section, nav, footer, aside, article { display: block; }
 
 body {
   padding: 30px;
-	background: #09002B;
+	background: #390BE4;
   color: #fff;
 	font-family: Helvetica, arial, sans-serif;
 	font-size: 25px;
@@ -23,18 +23,9 @@ body {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-[hidden] {
-  display: none;
-}
-
 ::selection {
-    background: #fff;
+    background: transparent;
 }
-
-/*.field label {
-  display: block;
-  margin-bottom: .3em;
-}*/
 
 button {
   box-sizing: border-box;
@@ -45,8 +36,9 @@ button {
   color: #fff;
   cursor: pointer;
   font-weight: 500;
-  border-radius: 5px;
   background: red;
+  display: block;
+  width: 100%;
 }
 
 button:hover {

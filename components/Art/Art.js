@@ -43,7 +43,7 @@ class Art extends React.Component {
     }
 
     return (
-      <div className="Art">
+      <div className="Art" hidden={this.props.phrase === ''}>
         <pre id="art">{art}</pre>
       </div>
     );

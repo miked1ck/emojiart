@@ -1,27 +1,44 @@
 .Customizer {
   position: fixed;
-  bottom: 20px;
-  left:  20px;
+  right: 20px;
+  bottom: 73px;
   z-index: 1111;
   box-sizing: border-box;
   display: table;
   padding: 20px;
-  border: 1px solid #ddd;
-  background: #eee;
+  background: #FBFBFB;
+  border-top: 1px solid #eee;
   color: #aaa;
   font-size: 15px;
-  border-radius: 5px;
+  width: 320px;
+  -webkit-transition: all 300ms cubic-bezier(0.060, 0.120, 0.000, 0.845);
+  -webkit-transform: translateY(0);
 }
 
 .Customizer .field {
   display: table-cell;
   width: 50%;
+  padding: 0 10px;
 }
 
 .Customizer .field input {
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 20px;
+  text-align: center;
+  padding: 5px 0 7px;
+}
+
+.Customizer[hidden] {
+  -webkit-transform: translateY(300px);
+}
+
+@media only screen and (max-width: 600px) {
+  .Customizer {
+    position: fixed;
+    right: 0;
+    bottom: 53px;
+    width: 100%;
+  }
 }
