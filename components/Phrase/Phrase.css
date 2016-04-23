@@ -24,3 +24,8 @@
 .Phrase input::-webkit-input-placeholder {
    color: #ddd;
 }
+
+.Phrase input::selection {
+    background: blue;
+    color: #fff;
+}
