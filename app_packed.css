@@ -1,0 +1,183 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,form,label,table,caption,tbody,tfoot,thead,tr,th,td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+header, section, nav, footer, aside, article { display: block; }
+
+body {
+  padding: 30px;
+	background: #390BE4;
+  color: #fff;
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 25px;
+	line-height: 1.4;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+::selection {
+    background: transparent;
+}
+
+button {
+  box-sizing: border-box;
+  padding: 15px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  background: red;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background: #E40909;
+}
+
+.Copy {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  display: block;
+  -webkit-transition: all 300ms cubic-bezier(0.060, 0.120, 0.000, 0.845);
+  -webkit-transform: translateY(0);
+}
+
+.Copy[hidden] {
+  -webkit-transform: translateY(300px);
+}
+
+@media only screen and (max-width: 600px) {
+  .Copy {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.Customizer {
+  position: fixed;
+  right: 20px;
+  bottom: 73px;
+  z-index: 1111;
+  box-sizing: border-box;
+  display: table;
+  padding: 20px;
+  background: #FBFBFB;
+  border-top: 1px solid #eee;
+  color: #aaa;
+  font-size: 15px;
+  width: 320px;
+  -webkit-transition: all 300ms cubic-bezier(0.060, 0.120, 0.000, 0.845);
+  -webkit-transform: translateY(0);
+}
+
+.Customizer .field {
+  display: table-cell;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.Customizer .field input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0 7px;
+}
+
+.Customizer[hidden] {
+  -webkit-transform: translateY(300px);
+}
+
+@media only screen and (max-width: 600px) {
+  .Customizer {
+    position: fixed;
+    right: 0;
+    bottom: 53px;
+    width: 100%;
+  }
+}
+
+.Phrase {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.Phrase input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px;
+  border: none;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  color: #aaa;
+  background: #fff;
+}
+
+.Phrase input::-webkit-input-placeholder {
+   color: #ddd;
+}
+
+.Phrase input::selection {
+    background: blue;
+    color: #fff;
+}
+
+.Art {
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 110px 50px 180px;
+  overflow: auto;
+  color: #aaa;
+  text-align: center;
+  font-size: 25px;
+  background: #fff;
+  -webkit-transition: all 300ms cubic-bezier(0.060, 0.120, 0.000, 0.845);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+}
+
+.Art button {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  padding: 15px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  background: red;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+}
+
+.Art[hidden] {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+}
