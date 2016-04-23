@@ -7,6 +7,14 @@ class Customizer extends React.Component {
     this.fill = props.fill;
   }
 
+  _handleKeyDown(e) {
+    var allowed = [91, 17, 32, 8];
+    if (allowed.indexOf(e.which) < 0) {
+      e.preventDefault();
+    }
+  }
+
+
   _handleChange(e) {
     this[e.target.name] = e.target.value;
     this.props._setState({ 'shading': this.shading, 'fill': this.fill });
@@ -16,13 +24,11 @@ class Customizer extends React.Component {
     return (
       <div className="Customizer" hidden={this.props.phrase === ''}>
         <div className="field">
-          <label for="fill">Change fill</label>
-          <input type="text" name="fill" size="1" onChange={(e) => this._handleChange(e)} placeholder={this.props.fill} />
+          <input type="text" name="fill" size="1" onKeyDown={(e) => this._handleKeyDown(e)} onChange={(e) => this._handleChange(e)} placeholder={this.props.fill} />
         </div>
 
         <div className="field">
-          <label for="background">Shading</label>
-          <input type="text" name="shading" size="1" onChange={(e) => this._handleChange(e)} placeholder={this.props.shading} />
+          <input type="text" name="shading" size="1" onKeyDown={(e) => this._handleKeyDown(e)} onChange={(e) => this._handleChange(e)} placeholder={this.props.shading} />
         </div>
       </div>
     );
