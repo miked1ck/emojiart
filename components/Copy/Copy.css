@@ -18,5 +18,8 @@
     right: 0;
     bottom: 0;
     width: 100%;
+
+    /* hide on mobile because copy-paste don't work on mobile */
+    display: none;
   }
 }

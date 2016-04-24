@@ -38,7 +38,7 @@
   .Customizer {
     position: fixed;
     right: 0;
-    bottom: 53px;
+    bottom: 0;
     width: 100%;
   }
 }
