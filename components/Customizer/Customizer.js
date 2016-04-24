@@ -8,8 +8,9 @@ class Customizer extends React.Component {
   }
 
   _handleKeyDown(e) {
-    var allowed = [91, 17, 32, 8];
-    if (allowed.indexOf(e.which) < 0) {
+    console.log(e.which);
+    var not_allowed = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 119, 120, 121, 186, 187, 188, 189, 190, 191, 192, 222];
+    if (not_allowed.indexOf(e.which) >= 0) {
       e.preventDefault();
     }
   }
