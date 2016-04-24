@@ -14,7 +14,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 header, section, nav, footer, aside, article { display: block; }
 
 body {
-  padding: 30px;
 	background: #390BE4;
   color: #fff;
 	font-family: Helvetica, arial, sans-serif;
