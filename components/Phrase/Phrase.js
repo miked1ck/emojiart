@@ -10,6 +10,10 @@ class Phrase extends React.Component {
 
   _handleChange(e) {
     this.props._setState({ 'phrase': e.target.value });
+
+    setTimeout(function() {
+      window.scrollTo(0,document.body.scrollHeight);
+    }, 50);
   }
 
   _handlePaste(e) {
@@ -20,7 +24,7 @@ class Phrase extends React.Component {
     return (
       <div className="Phrase">
         <div className="field">
-          <input type="text" name="phrase" id="phrase" value={this.props.phrase} placeholder="Type a word or phrase" autoFocus onPaste={(e) => this._handlePaste(e)} onKeyDown={(e) => this._handleKeyDown(e)} onChange={(e) => this._handleChange(e)} />
+          <input type="text" name="phrase" id="phrase" autoComplete={false} value={this.props.phrase} placeholder="Type a word or phrase" autoFocus onPaste={(e) => this._handlePaste(e)} onKeyDown={(e) => this._handleKeyDown(e)} onChange={(e) => this._handleChange(e)} />
         </div>
       </div>
     );

@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-    background: transparent;
+    background: #eee;
 }
 
 button {
