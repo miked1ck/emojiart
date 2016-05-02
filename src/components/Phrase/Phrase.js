@@ -1,4 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+
+// Component
+///////////////////////////
 
 class Phrase extends React.Component {
   _handleKeyDown(e) {
@@ -9,7 +14,7 @@ class Phrase extends React.Component {
   }
 
   _handleChange(e) {
-    this.props._setState({ 'phrase': e.target.value });
+    this.props._broadcastPhrase(e.target.value);
 
     setTimeout(function() {
       window.scrollTo(0,document.body.scrollHeight);
@@ -31,4 +36,24 @@ class Phrase extends React.Component {
   }
 }
 
-export default Phrase;
+
+// Store
+///////////////////////////
+
+const phraseState = (state) => {
+  return { phrase: state.phrase };
+};
+
+const phraseDispatch = (dispatch) => {
+  return {
+    _broadcastPhrase: (phrase) => {
+      dispatch({ type: 'BROADCAST_PHRASE', phrase: phrase });
+    }
+  }
+};
+
+
+// Export
+///////////////////////////
+
+export default connect(phraseState, phraseDispatch)(Phrase);

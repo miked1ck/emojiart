@@ -1,29 +1,18 @@
 var webpack = require('webpack');
 var path = require('path');
-var BUILD_DIR = path.resolve('./public');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
-  entry: './app/app.js',
-  output: {
-    path: BUILD_DIR,
-    filename: '/app_packed.js'
-  },
+  entry: [ './src/app.js', './src/app.less', ],
+  output: { path: './src/public/', filename: 'app.packed.js' },
   module : {
     loaders : [
-      {
-        test : /\.js?/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
+      { test : /\.js?/, loader: 'babel-loader', query: { presets: ['es2015', 'react', 'stage-2'] } },
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") }
     ]
-  }
+  },
+  plugins: [ new ExtractTextPlugin("app.packed.css", { allChunks: true }) ]
 };
 
 module.exports = config;

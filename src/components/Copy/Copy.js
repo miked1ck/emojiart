@@ -1,5 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Clipboard from 'clipboard';
+
+
+// Component
+///////////////////////////
 
 class Copy extends React.Component {
   constructor() {
@@ -31,4 +36,20 @@ class Copy extends React.Component {
   }
 }
 
-export default Copy;
+
+// Store
+///////////////////////////
+
+const copyState = (state) => {
+  return { phrase: state.phrase };
+};
+
+const copyDispatch = (dispatch) => {
+  return {}
+};
+
+
+// Export
+///////////////////////////
+
+export default connect(copyState, copyDispatch)(Copy);
