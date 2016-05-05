@@ -1,6 +1,6 @@
-# Emoji Art – reactjs, express, and webpack
+# Emoji art translator (react, redux, express)
 
-Like ascii art, type a phrase and this app will render emoji letter art. [Demo](http://michaeldick.github.io/emojiart)
+Like ascii art, type a phrase and get app will render emoji letter art. [Demo](http://michaeldick.github.io/emojiart)
 
 ![screenshot](screenshot.gif)
 

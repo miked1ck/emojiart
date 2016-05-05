@@ -21,7 +21,7 @@ class Customizer extends React.Component {
 
   _handleChange(e) {
     this[e.target.name] = e.target.value;
-    this.props._changeLanguage(this.shading, this.fill);
+    this.props._changeLanguage(this.fill, this.shading);
   }
 
   render() {
